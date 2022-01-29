@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.*;
 
 //Divide & Conquer technique
 public class MergeSort{
@@ -28,16 +27,16 @@ public static void conquer(int[] arr, int si, int mid, int ei){
         arr[j] = merged[i];
     }
 }
-public static void divide(int arr[], int si, int ei){
-    if(si >= ei){
+    public static void divide(int arr[], int si, int ei){
+        if(si >= ei){
         return;
     }
 
-    int mid = si +(ei -si)/2; // for better space complexity (si + ei)/2
-    divide(arr, si, mid);
-    divide(arr, mid + 1, ei);
-    conquer(arr, si, mid, ei);
-}
+        int mid = si +(ei -si)/2; // for better space complexity (si + ei)/2
+        divide(arr, si, mid);
+        divide(arr, mid + 1, ei);
+        conquer(arr, si, mid, ei);
+    }
 
     public static void main(String[]args){
         Scanner scn = new Scanner(System.in);
